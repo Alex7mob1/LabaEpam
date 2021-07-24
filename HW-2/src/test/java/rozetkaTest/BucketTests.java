@@ -22,7 +22,7 @@ import static org.testng.Assert.assertEquals;
 public class BucketTests {
 
     private WebDriver driver;
-    private String expectedPrice = "125 988";
+    private String expectedPrice = "126 186 ₴";
     private WebDriver wait;
 
 
@@ -103,7 +103,7 @@ public class BucketTests {
         webElement.click();
         webElement = driver.findElement(xpath("//*[contains(text(),' От дорогих к дешевым ')]"));
         webElement.click();
-        webElement = driver.findElement(xpath("//*[contains(text(),'Сандалии Jack Wolfskin Lakewood Ride Sandal')]"));
+        webElement = driver.findElement(By.cssSelector("ul.catalog-grid li:nth-child(2) span.goods-tile__title"));
         webElement.click();
         webElement = driver.findElement(xpath("//*[@class='product-buttons__item ng-star-inserted']//*[@aria-label='Купить']"));
         webElement.click();
