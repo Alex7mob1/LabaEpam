@@ -1,20 +1,21 @@
 package rozetka.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public class Data {
 
     private String type;
     private String company;
     private String price;
 
+    public Data(String type, String company, String price) {
+        this.type = type;
+        this.company = company;
+        this.price = price;
+    }
+
     public String getType() {
         return type;
     }
 
-    @XmlElement
     public void setType(String type) {
         this.type = type;
     }
@@ -23,7 +24,6 @@ public class Data {
         return company;
     }
 
-    @XmlElement
     public void setCompany(String company) {
         this.company = company;
     }
@@ -32,7 +32,6 @@ public class Data {
         return price;
     }
 
-    @XmlElement
     public void setPrice(String price) {
         this.price = price;
     }
