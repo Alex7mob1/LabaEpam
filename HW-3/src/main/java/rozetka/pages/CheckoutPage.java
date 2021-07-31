@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class CheckoutPage extends BasePage {
 
-    @FindBy(xpath = "//*[@class='checkout-total__value checkout-total__value_size_large']")
+    @FindBy(xpath = "//*[contains(@class, 'js-total')]//*[contains(@class,'checkout-total__value')]")
     private WebElement totalPrice;
 
     public WebElement getTotalPrice() {

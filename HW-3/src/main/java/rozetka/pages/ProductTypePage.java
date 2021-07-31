@@ -1,35 +1,49 @@
 package rozetka.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 
-public class ProductTypePage extends BasePage{
+import java.util.concurrent.TimeUnit;
 
-    @FindBy(css = " input[type=search]:nth-of-type(1)")
+public class ProductTypePage extends BasePage {
+
+    @FindBy(xpath = "//*[@data-filter-name='producer']//*[@type='search']")
     private WebElement typeSearchBox;
 
-    public WebElement getTypeSearchBox(){
+    @FindBy(css = "ul[class='checkbox-filter ng-star-inserted'] label")
+    private WebElement firstFindBox;
+
+    @FindBy(css = "option[value='2: expensive']")
+    private WebElement expensiveFirst;
+
+    @FindBy(css = "ul[class = 'catalog-grid ng-star-inserted'] li:first-child")
+    private WebElement firstProduct;
+
+    public WebElement getTypeSearchBox() {
+        wait.until((ExpectedCondition<Boolean>) wdriver -> ((JavascriptExecutor) driver).executeScript(
+                "return document.readyState"
+        ).equals("complete"));
+        wait.pollingEvery(1, TimeUnit.SECONDS).until((ExpectedCondition<Object>) webDriver -> typeSearchBox.isDisplayed());
         return typeSearchBox;
     }
 
-    @FindBy(css = "ul[class='checkbox-filter ng-star-inserted'] input[class='custom-checkbox']")
-    private WebElement firstFindBox;
-
-    public WebElement getFirstFindBox(){
-        return firstFindBox;
+    public void clickOnFirstBox() {
+        wait.ignoring(StaleElementReferenceException.class)
+                .until(driver -> {
+                    driver.findElement(By.cssSelector("ul[class='checkbox-filter ng-star-inserted'] label")).click();
+                    return true;
+                });
     }
 
-    @FindBy(css="option[value='2: expensive']")
-    private WebElement expensiveFirst;
-
-    public WebElement getExpensiveFirst(){
+    public WebElement getExpensiveFirst() {
         return expensiveFirst;
     }
 
-    @FindBy(css ="ul[class = 'catalog-grid ng-star-inserted'] li:first-child")
-    private WebElement firstProduct;
-
-    public WebElement getFirstProduct(){
+    public WebElement getFirstProduct() {
         return firstProduct;
     }
 }

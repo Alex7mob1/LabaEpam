@@ -10,9 +10,10 @@ public class SearchPanelBL {
         searchPanel = new SearchPanel();
     }
 
-    public void inputTypeName(String type) {
+    public SearchPanelBL inputTypeName(String type) {
         searchPanel.getSearchBox().clear();
         searchPanel.getSearchBox().sendKeys((type));
+        return this;
     }
 
     public ProductTypePageBL clickOnSearchButton() {

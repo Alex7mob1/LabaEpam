@@ -10,8 +10,9 @@ public class HomePageBL {
         homePage = new HomePage();
     }
 
-    public void clickOnCompLaptopBtn(){
+    public HomePageBL clickOnCompLaptopBtn(){
         homePage.getCompLaptopBtn().click();
+        return this;
     }
 
     public SearchPanelBL getSearchPanelBL(){

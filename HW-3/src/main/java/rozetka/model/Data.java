@@ -1,12 +1,19 @@
 package rozetka.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement(name = "data")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Data {
 
     private String type;
     private String company;
-    private String price;
+    private int price;
 
-    public Data(String type, String company, String price) {
+    public Data(String type, String company, int price) {
         this.type = type;
         this.company = company;
         this.price = price;
@@ -28,11 +35,11 @@ public class Data {
         this.company = company;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }

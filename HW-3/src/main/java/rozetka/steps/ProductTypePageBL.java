@@ -1,6 +1,7 @@
 package rozetka.steps;
 
 import rozetka.pages.ProductTypePage;
+import rozetka.utils.Scroll;
 
 public class ProductTypePageBL {
 
@@ -10,17 +11,22 @@ public class ProductTypePageBL {
         productTypePage = new ProductTypePage();
     }
 
-    public void inputCompanyName(String company){
+    public ProductTypePageBL inputCompanyName(String company){
         productTypePage.getTypeSearchBox().clear();
         productTypePage.getTypeSearchBox().sendKeys((company));
+        return this;
     }
 
-    public void clickOnCompanyBox(){
-        productTypePage.getFirstFindBox().click();
+    public ProductTypePageBL clickOnCompanyBox(){
+        Scroll scroll = new Scroll();
+        scroll.scroll();
+        productTypePage.clickOnFirstBox();
+        return this;
     }
 
-    public void clickOnExpensiveFirst(){
+    public ProductTypePageBL clickOnExpensiveFirst(){
         productTypePage.getExpensiveFirst().click();
+        return this;
     }
 
     public ProductPageBL clickOnFirstProduct(){
