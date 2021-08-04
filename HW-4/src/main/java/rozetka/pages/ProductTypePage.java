@@ -1,6 +1,5 @@
 package rozetka.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -14,7 +13,8 @@ public class ProductTypePage extends BasePage {
     @FindBy(xpath = "//*[@data-filter-name='producer']//*[@type='search']")
     private WebElement typeSearchBox;
 
-    @FindBy(css = "ul[class='checkbox-filter ng-star-inserted'] label")
+    //@FindBy(css = "ul[class='checkbox-filter ng-star-inserted'] label")
+    @FindBy(css = "ul[class='checkbox-filter ng-star-inserted'] ul[class='checkbox-filter'] li:first-child")
     private WebElement firstFindBox;
 
     @FindBy(css = "option[value='2: expensive']")
@@ -34,7 +34,7 @@ public class ProductTypePage extends BasePage {
     public void clickOnFirstBox() {
         wait.ignoring(StaleElementReferenceException.class)
                 .until(driver -> {
-                    driver.findElement(By.cssSelector("ul[class='checkbox-filter ng-star-inserted'] label")).click();
+                    firstFindBox.click();
                     return true;
                 });
     }

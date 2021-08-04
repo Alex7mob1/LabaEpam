@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProductPage extends BasePage{
 
-    @FindBy(xpath = "//*[@class='product-buttons__item ng-star-inserted']")
+    @FindBy(xpath = "//*[contains(@class, 'button_with_icon button_color_green ')]")
     private WebElement buyButton;
 
     public WebElement getBuyButton(){

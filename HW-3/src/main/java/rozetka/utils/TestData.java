@@ -13,7 +13,7 @@ import java.io.File;
 public class TestData {
 
     public static Data getTestData() {
-        File file = new File("D:/JavaProg/LabaEpam/HW-3/src/main/resources/data.xml");
+        File file = new File("src/main/resources/data.xml");
 
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

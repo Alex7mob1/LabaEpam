@@ -15,7 +15,7 @@ import java.util.List;
 public class TestProducts {
 
     public static List<Product> getTestProducts() {
-        File file = new File("D:/JavaProg/LabaEpam/HW-4/src/main/resources/products.xml");
+        File file = new File("src/main/resources/products.xml");
 
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

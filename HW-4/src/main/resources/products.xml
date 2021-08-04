@@ -3,27 +3,26 @@
     <product>
         <type>Ноутбуки</type>
         <company>HP</company>
-        <price>250000</price>
+        <price>2500000</price>
     </product>
     <product>
         <type>Мобільні телефони</type>
         <company>Apple</company>
-        <price>250000</price>
+        <price>2500000</price>
     </product>
     <product>
         <type>Телевізори</type>
         <company>LG</company>
-        <price>250000</price>
+        <price>2500000</price>
     </product>
     <product>
-        <type>Фото та відео</type>
-        <company>nikon</company>
-        <price>250000</price>
+        <type>Планшети</type>
+        <company>Samsung</company>
+        <price>2500000</price>
     </product>
     <product>
-        <type>Ванни</type>
-        <company>Ravak</company>
-        <price>250000</price>
+        <type>Монітори</type>
+        <company>Asus</company>
+        <price>2500000</price>
     </product>
-
 </products>

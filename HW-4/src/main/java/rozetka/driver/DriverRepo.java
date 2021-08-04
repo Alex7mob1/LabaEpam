@@ -12,7 +12,8 @@ public class DriverRepo {
     private static final ThreadLocal<WebDriver> DRIVERS = new ThreadLocal<>();
 
     static {
-        System.setProperty(PropertiesReader.getValueProperty("name"), PropertiesReader.getValueProperty("location"));
+        System.setProperty(PropertiesReader.getValueProperty("name"),
+                PropertiesReader.getValueProperty("location"));
     }
 
     public DriverRepo() {
