@@ -6,11 +6,11 @@ public class ProductPageBL {
 
     private ProductPage productPage;
 
-    public ProductPageBL(){
+    public ProductPageBL() {
         productPage = new ProductPage();
     }
 
-    public CheckoutWindowPageBL clickOnBuyButton(){
+    public CheckoutWindowPageBL clickOnBuyButton() {
         productPage.clickOnBuyButton();
         return new CheckoutWindowPageBL();
     }

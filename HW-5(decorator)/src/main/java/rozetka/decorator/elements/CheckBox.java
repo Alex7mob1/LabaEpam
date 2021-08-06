@@ -12,15 +12,15 @@ public class CheckBox extends ElementDecorator {
     }
 
     public void setCheckBox() {
-        if (!element.isSelected()) {
-            DriverRepo.getWebDriverWait()
-                    .ignoring(StaleElementReferenceException.class)
-                    .until(driver -> {
+        DriverRepo.getWebDriverWait()
+                .ignoring(StaleElementReferenceException.class)
+                .until(driver -> {
+                    if (!element.isSelected()) {
                         element.click();
-                        return true;
-                    });
-        } else {
-            System.out.println("Box already checked");
-        }
+                    } else {
+                        System.out.println("Box already checked");
+                    }
+                    return true;
+                });
     }
 }

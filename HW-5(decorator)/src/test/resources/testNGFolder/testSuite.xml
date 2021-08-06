@@ -1,5 +1,9 @@
 <suite name="TestSuite" data-provider-thread-count="3">
 
+    <listeners>
+        <listener class-name="rozetka.listener.TestScreenShootListener"/>
+    </listeners>
+
     <test name="Product Test">
         <classes>
             <class name="rozetkaTest.ProductTest"/>

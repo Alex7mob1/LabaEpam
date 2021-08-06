@@ -7,28 +7,24 @@ public class ProductTypePageBL {
 
     private ProductTypePage productTypePage;
 
-    public ProductTypePageBL(){
+    public ProductTypePageBL() {
         productTypePage = new ProductTypePage();
     }
 
-    public ProductTypePageBL inputCompanyName(String company){
-        productTypePage.inputTextInTypeSearchBox(company);
-        return this;
-    }
-
-    public ProductTypePageBL clickOnCompanyBox(){
+    public ProductTypePageBL searchCompanyElements(String company) {
         Scroll scroll = new Scroll();
         scroll.scroll();
+        productTypePage.inputTextInTypeSearchBox(company);
         productTypePage.clickOnFirstBox();
         return this;
     }
 
-    public ProductTypePageBL clickOnExpensiveFirst(){
+    public ProductTypePageBL clickOnExpensiveFirst() {
         productTypePage.clickOnExpensiveFirst();
         return this;
     }
 
-    public ProductPageBL clickOnFirstProduct(){
+    public ProductPageBL clickOnFirstProduct() {
         productTypePage.clickOnFirstProduct();
         return new ProductPageBL();
     }

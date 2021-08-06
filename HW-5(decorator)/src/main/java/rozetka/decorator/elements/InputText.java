@@ -13,7 +13,8 @@ public class InputText extends ElementDecorator {
         element.clear();
         element.sendKeys(charSequences);
     }
-    public boolean isDisplayed(){
+
+    public boolean isDisplayed() {
         return element.isDisplayed();
     }
 }

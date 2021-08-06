@@ -3,8 +3,6 @@ package rozetka.navigation;
 import org.openqa.selenium.WebDriver;
 import rozetka.driver.DriverRepo;
 
-import java.util.concurrent.TimeUnit;
-
 public class Navigation {
 
     private WebDriver driver;

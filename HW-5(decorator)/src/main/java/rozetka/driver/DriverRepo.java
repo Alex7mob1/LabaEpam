@@ -35,9 +35,9 @@ public class DriverRepo {
         return DRIVERS.get();
     }
 
-    public static WebDriverWait getWebDriverWait(){
-        if(WEB_DRIVER_WAIT==null)
-            WEB_DRIVER_WAIT = new WebDriverWait(getWebDriver(),300);
+    public static WebDriverWait getWebDriverWait() {
+        if (WEB_DRIVER_WAIT == null)
+            WEB_DRIVER_WAIT = new WebDriverWait(getWebDriver(), 300);
         return WEB_DRIVER_WAIT;
     }
 

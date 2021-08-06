@@ -10,12 +10,8 @@ public class SearchPanelBL {
         searchPanel = new SearchPanel();
     }
 
-    public SearchPanelBL inputTypeName(String type) {
+    public ProductTypePageBL searchElement(String type) {
         searchPanel.inputTextInSearchBox(type);
-        return this;
-    }
-
-    public ProductTypePageBL clickOnSearchButton() {
         searchPanel.clickOnSearchButton();
         return new ProductTypePageBL();
     }

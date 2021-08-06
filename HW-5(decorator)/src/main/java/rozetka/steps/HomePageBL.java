@@ -6,16 +6,16 @@ public class HomePageBL {
 
     private HomePage homePage;
 
-    public HomePageBL(){
+    public HomePageBL() {
         homePage = new HomePage();
     }
 
-    public HomePageBL clickOnCompLaptopBtn(){
+    public HomePageBL clickOnCompLaptopBtn() {
         homePage.clickOnCompLaptopBtn();
         return this;
     }
 
-    public SearchPanelBL getSearchPanelBL(){
+    public SearchPanelBL getSearchPanelBL() {
         return new SearchPanelBL();
     }
 }

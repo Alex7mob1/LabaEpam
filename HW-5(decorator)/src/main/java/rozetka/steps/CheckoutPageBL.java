@@ -13,7 +13,7 @@ public class CheckoutPageBL {
     public CheckoutPageBL() {
         checkoutPage = new CheckoutPage();
         tPrice = Integer.parseInt(checkoutPage.getTotalPrice()
-                .getText().replaceAll("\\D+", ""));
+                .replaceAll("\\D+", ""));
 
     }
 

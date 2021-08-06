@@ -1,11 +1,14 @@
 package rozetkaTest;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import rozetka.listener.TestScreenShootListener;
 import rozetka.model.Product;
 import rozetka.steps.SearchPanelBL;
 import rozetka.utils.TestProducts;
 
+@Listeners(TestScreenShootListener.class)
 public class ProductTest extends BaseTest {
 
     @DataProvider(parallel = true)
@@ -20,10 +23,8 @@ public class ProductTest extends BaseTest {
 
         SearchPanelBL searchPanelBL = new SearchPanelBL();
 
-        searchPanelBL.inputTypeName(product.getType())
-                .clickOnSearchButton()
-                .inputCompanyName(product.getCompany())
-                .clickOnCompanyBox()
+        searchPanelBL.searchElement(product.getType())
+                .searchCompanyElements(product.getCompany())
                 .clickOnExpensiveFirst()
                 .clickOnFirstProduct()
                 .clickOnBuyButton()

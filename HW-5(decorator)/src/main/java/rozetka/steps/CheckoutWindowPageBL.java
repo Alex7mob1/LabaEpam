@@ -6,11 +6,11 @@ public class CheckoutWindowPageBL {
 
     private CheckoutWindowPage checkoutWindowPage;
 
-    public CheckoutWindowPageBL(){
+    public CheckoutWindowPageBL() {
         checkoutWindowPage = new CheckoutWindowPage();
     }
 
-    public CheckoutPageBL clickOnCheckoutBtn(){
+    public CheckoutPageBL clickOnCheckoutBtn() {
         checkoutWindowPage.clickOnCheckoutBtn();
         return new CheckoutPageBL();
     }
