@@ -1,0 +1,14 @@
+{
+  "authorId": 1,
+  "authorName": {
+    "first": "Oleksandr",
+    "second": "Mats"
+  },
+  "nationality": "no",
+  "birth": {
+    "date": "2000-09-11",
+    "country": "no",
+    "city": "no"
+  },
+  "authorDescription": "Std"
+}

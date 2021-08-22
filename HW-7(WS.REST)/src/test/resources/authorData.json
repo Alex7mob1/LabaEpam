@@ -1,0 +1,14 @@
+{
+  "authorId": 1,
+  "authorName": {
+    "first": "Alex",
+    "second": "Mats"
+  },
+  "nationality": "ukr",
+  "birth": {
+    "date": "2000-09-11",
+    "country": "ua",
+    "city": "Lviv"
+  },
+  "authorDescription": "Std"
+}
