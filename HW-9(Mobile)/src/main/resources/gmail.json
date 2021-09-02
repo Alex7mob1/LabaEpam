@@ -1,0 +1,13 @@
+{
+  "url_base": "http://127.0.0.1:4723/wd/hub",
+  "users": {
+    "login": [
+      "oles.mob1@gmail.com"
+    ]
+  },
+  "message": {
+    "who-receive-message": "oles.mob1@gmail.com",
+    "subject": "Mobile Test",
+    "message": "Hello world!"
+  }
+}
