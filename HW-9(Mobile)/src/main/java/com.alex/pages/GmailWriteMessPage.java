@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.FindBy;
 
-public class GmailWriteMessPage {
+public class GmailWriteMessPage extends BasePage {
 
     private static final Logger LOG = LogManager.getLogger(GmailWriteMessPage.class);
 
@@ -14,7 +14,7 @@ public class GmailWriteMessPage {
     private EditText receiverLetterEmail;
     @FindBy(id = "subject")
     private EditText subjectMessage;
-    @FindBy(id = "wc_body_layout")
+    @FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.google.android.gm:id/wc_body_layout']/*/*/*")//body_wrapper
     private EditText message;
     @FindBy(className = "android.widget.ImageButton")
     private Button previousActivity;
