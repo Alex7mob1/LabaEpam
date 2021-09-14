@@ -8,11 +8,11 @@ import rozetka.driver.DriverRepo;
 
 public class BasePage {
     protected WebDriver driver;
-    protected WebDriverWait wait;
+    //protected WebDriverWait wait;
 
     public BasePage() {
         driver = DriverRepo.getWebDriver();
-        wait = DriverRepo.getWebDriverWait();
+        //wait = DriverRepo.getWebDriverWait();
         PageFactory.initElements(new CustomDecorator(driver), this);
     }
 }

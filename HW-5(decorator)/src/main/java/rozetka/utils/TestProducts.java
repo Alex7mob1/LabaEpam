@@ -1,5 +1,7 @@
 package rozetka.utils;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -13,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestProducts {
+
+    private static final Logger LOG = LogManager.getLogger(TestProducts.class);
 
     public static List<Product> getTestProducts() {
         File file = new File("src/main/resources/products.xml");
@@ -48,6 +52,7 @@ public class TestProducts {
             }
             return products;
         } catch (Exception e) {
+            LOG.error("Cannot find data file ..");
             throw new RuntimeException("0");
         }
     }

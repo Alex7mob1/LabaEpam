@@ -2,7 +2,7 @@
 <products>
     <product>
         <type>Ноутбуки</type>
-        <company>HP</company>
+        <company>Asus</company>
         <price>2500000</price>
     </product>
     <product>
@@ -10,19 +10,19 @@
         <company>Apple</company>
         <price>2500000</price>
     </product>
-    <product>
-        <type>Телевізори</type>
-        <company>LG</company>
-        <price>2500000</price>
-    </product>
-    <product>
-        <type>Планшети</type>
-        <company>Samsung</company>
-        <price>2500000</price>
-    </product>
-    <product>
-        <type>Монітори</type>
-        <company>Asus</company>
-        <price>2500000</price>
-    </product>
+<!--    <product>-->
+<!--        <type>Телевізори</type>-->
+<!--        <company>LG</company>-->
+<!--        <price>2500000</price>-->
+<!--    </product>-->
+<!--    <product>-->
+<!--        <type>Планшети</type>-->
+<!--        <company>Samsung</company>-->
+<!--        <price>2500000</price>-->
+<!--    </product>-->
+<!--    <product>-->
+<!--        <type>Монітори</type>-->
+<!--        <company>Asus</company>-->
+<!--        <price>2500000</price>-->
+<!--    </product>-->
 </products>
